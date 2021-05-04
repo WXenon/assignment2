@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather History Site</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+        <script src="./js/site.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="content">
+                <h1>Hoon Wei Xiong's weather history site</h1>
+                <h3>Student ID: 34110222</h3>
+                <br/><br/><br/><br/>
+                <div id="startBtn">Start searching</div>
+            </div>
+        </div>
+        <div id ="main" class="content">
+            <br/><br/>
+            <h2>Enter search criteria</h2>
+            <form id="weatherForm" action="/retrieveInfo" onsubmit="return false;" enctype="multipart/form-data" method="post">
+                <fieldset id="info">
+                    <legend><h3>Information to search</h3></legend>
+                    <input type="checkbox" id="ws" name="measure" value="ws">
+                    <h4><label for="ws">Wind Speed</label></h4>
+                    <input type="checkbox" id="sr" name="measure" value="sr">
+                    <h4><label for="sr">Solar Radiation</label></h4>
+                    <input type="checkbox" id="both" name="measure" value="both">
+                    <h4><label for="both">Both</label></h4>
+                </fieldset>
+                <fieldset class="duration">
+                    <legend><h3>From</h3></legend>
+                    <b>Month: </b>
+                    <select id="fmth" name="fmonth">
+                        <option value="0">---Select month---</option>
+                        <option value="01">Jan</option>
+                        <option value="02">Feb</option>
+                        <option value="03">Mar</option>
+                        <option value="04">Apr</option>
+                        <option value="05">May</option>
+                        <option value="06">Jun</option>
+                        <option value="07">Jul</option>
+                        <option value="08">Aug</option>
+                        <option value="09">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+                </fieldset>
+                <fieldset class="duration">
+                    <legend><h3>To</h3></legend>
+                    <b>Month: </b>
+                    <select id="tmth" name="tmonth">
+                        <option value="0">---Select month---</option>
+                        <option value="01">Jan</option>
+                        <option value="02">Feb</option>
+                        <option value="03">Mar</option>
+                        <option value="04">Apr</option>
+                        <option value="05">May</option>
+                        <option value="06">Jun</option>
+                        <option value="07">Jul</option>
+                        <option value="08">Aug</option>
+                        <option value="09">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+                </fieldset>
+                <fieldset class="duration">
+                    <legend><h3>Year</h3></legend>
+                    <b>Enter year: </b>
+                    <input type="text" id="yr" name="year" placeholder="2017" maxlength="4" size="4" pattern="0-9{4}">
+                </fieldset>
+                <input type="submit" id="submit"/>
+            </form>
+            <br/>
+            <div id="display">
+                <div id="dispChoice">
+                    <input type="checkbox" id="table" name="choice" value="table">
+                    <h4><label for="table">Table</label></h4>
+                    <input type="checkbox" id="graph" name="choice" value="graph">
+                    <h4><label for="graph">Graph</label></h4>
+                    <input type="checkbox" id="bothDisp" name="choice" value="both">
+                    <h4><label for="bothDisp">Both</label></h4>
+                </div>
+                <div id="dispContent">
+                    <div id="error"></div>
+                    <div id="noSearch">No search criteria detected</div>
+                    <div id="filteredTable"></div>
+                    <div id="filteredGraph"><canvas id="graphDisp"></canvas></div>
+                    <div id="noView">Please select at least one way to view data</div>
+                    <div id="load">Loading.</div>
+                    <div id="invalid">Please make sure:<br/>1. At least 1 item checked in "Info to search"<br/>2. Numbers only for year<br/>3. Start month is before end month</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

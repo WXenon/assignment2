@@ -1,0 +1,246 @@
+html{
+    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+}
+body{
+	font-family: sans-serif;
+    width: 100vw;
+    margin:0%;
+    height: 100vh;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#header{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    /* background: url("http://ceto.murdoch.edu.au:40511/assignment2/images/sunny.jpg") no-repeat center center fixed; */
+    background: url("../images/sunny.jpg") no-repeat center center fixed;
+    background-blend-mode: darken;
+    transition: 2s ease-in-out;
+    align-items: center;
+}
+
+#header>.content{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 3.5em;
+    font-weight: bold;
+    margin:0%;
+}
+
+#startBtn { 
+	color: #fff;
+	width: 10%;
+	padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+	border: 4px double rgba(255,255,255,0.3);
+    border-radius: 20px;
+	background: rgba(0,0,0,0.3);
+}
+
+#startBtn:hover{
+    cursor: pointer;
+}
+
+body>.content{
+    height:100vmax;
+    width: 100vw;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+h2{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+form{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#info{
+    margin-left:5%;
+    margin-right:5%;
+    width: 20%;
+}
+
+.duration{
+    margin-left:5%;
+    margin-right:5%;
+    width: 10%;
+}
+
+h4{
+    display: inline-block;
+    margin:0%;
+}
+
+#submit{
+    display: none;
+}
+
+#display{
+    width: 85vw;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#dispChoice{
+    width: 50%;
+    height: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#dispContent{
+    width: 98%;
+    height: 93%;
+    position: relative;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#load {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    opacity: 0.9;
+    background-color: #fff;
+    z-index: 99;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#noSearch {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    opacity: 1;
+    background-color: cadetblue;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#filteredTable{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#filteredGraph{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#noView{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#invalid{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: red;
+}
+
+table, tr, td{
+    border: 1px solid black;
+}
+
+#error{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#graphDisp{
+    height:100%;
+    width:100%;
+    background-color: white;
+}
+
+td:empty{
+    background-color: black;
+}
